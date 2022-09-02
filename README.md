@@ -1,2 +1,2 @@
-`dc build`
-`dc up`
+- `dc build`
+- `dc up`
