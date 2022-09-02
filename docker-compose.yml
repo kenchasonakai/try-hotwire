@@ -1,0 +1,19 @@
+version: '3'
+services:
+  web:
+    build: .
+    command: bin/dev
+    #pryとかに必要
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/try-hotwire
+      - bundle_data:/usr/local/bundle:cached
+      - node_modules:/try-hotwire/node_modules
+    environment:
+      TZ: Asia/Tokyo
+    ports:
+      - "3000:3000"
+volumes:
+  bundle_data:
+  node_modules:
